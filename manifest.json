@@ -1,7 +1,7 @@
 {
-  "name": "Copenhagen",
-  "author": "Zendesk",
-  "version": "2.10.0",
+  "name": "Incognito Support Theme",
+  "author": "Alexey from LP/AD <alexey@lpad.ca>",
+  "version": "1.0.0",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -27,14 +27,14 @@
           "type": "color",
           "description": "text_color_description",
           "label": "text_color_label",
-          "value": "#2F3941"
+          "value": "#202635"
         },
         {
           "identifier": "link_color",
           "type": "color",
           "description": "link_color_description",
           "label": "link_color_label",
-          "value": "#1F73B7"
+          "value": "#202635"
         },
         {
           "identifier": "visited_link_color",
@@ -135,6 +135,10 @@
           "label": "text_font_label",
           "options": [
             {
+              "label": "Nunito Sans",
+              "value": "Nunito Sans, -apple-system, sans-serif"
+            },
+            {
               "label": "System",
               "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
             },
@@ -199,7 +203,7 @@
               "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
             }
           ],
-          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+          "value": "Nunito Sans, -apple-system, sans-serif"
         }
       ]
     },
@@ -217,7 +221,7 @@
           "type": "checkbox",
           "description": "show_brand_name_description",
           "label": "show_brand_name_label",
-          "value": true
+          "value": false
         },
         {
           "identifier": "favicon",

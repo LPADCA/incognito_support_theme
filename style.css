@@ -643,7 +643,7 @@ ul {
   position: relative;
   align-items: center;
   display: flex;
-  height: 71px;
+  height: 91px;
   justify-content: space-between;
 }
 
@@ -655,7 +655,7 @@ ul {
 }
 
 .logo img {
-  max-height: 37px;
+  max-height: 72px;
   vertical-align: middle;
 }
 
@@ -706,6 +706,41 @@ ul {
   font-size: 14px;
   padding: 0 20px 0 0;
   width: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+
+.English:before {
+  content: " ";
+  background-image: url("./assets/images/us.svg");
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.Español:before {
+  content: " ";
+  background-image: url("./assets/images/spain.svg");
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+
+}
+
+.Português:before {
+  content: " ";
+  background-image: url("./assets/images/brazil.svg");
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.header-dropdown {
+  margin-right: 20px;
 }
 
 @media (min-width: 768px) {
@@ -4599,7 +4634,8 @@ html[dir="rtl"] .notification-left-aligned {
   cursor: pointer;
   background: none;
   border: 0;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 0;
   text-align: initial;
   vertical-align: middle;
@@ -4652,7 +4688,8 @@ html[dir="rtl"] .notification-left-aligned {
 .dropdown-menu [role="menuitem"] {
   color: #333;
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 7px 40px 7px 20px;
   white-space: nowrap;
   background-color: transparent;

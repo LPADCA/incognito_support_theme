@@ -19,24 +19,37 @@
       {{link 'community'}}
       {{link 'new_request' class='submit-a-request'}}
     </nav>
-    {{#if signed_in}}
-      <div class="user-info dropdown">
-        <button class="dropdown-toggle" aria-haspopup="true">
-          {{user_avatar class="user-avatar"}}
-          <span class="hide-on-mobile">
-            {{user_name}}
-            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
-              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
-            </svg>
-          </span>
+    {{#if alternative_locales}}
+      <span class="dropdown header-dropdown language-selector">
+        <button class="dropdown-toggle {{current_locale.name}}" aria-haspopup="true">
         </button>
-        <div class="dropdown-menu" role="menu">
-          {{link "my_activities" role="menuitem"}}
-          {{my_profile role="menuitem"}}
-          {{change_password role="menuitem"}}
-          {{link "sign_out" role="menuitem"}}
-        </div>
+        <span class="dropdown-menu dropdown-menu-end" role="menu">
+          {{#each alternative_locales}}
+            <a href="{{url}}" dir="{{direction}}" class="{{name}}" rel="nofollow" role="menuitem">
+              {{name}}
+            </a>
+          {{/each}}
+        </span>
+      </span>
+    {{/if}}
+    {{#if signed_in}}
+    <div class="user-info dropdown">
+      <button class="dropdown-toggle" aria-haspopup="true">
+        {{!-- {{user_avatar class="user-avatar"}} --}}
+        <span >
+          {{user_name}}
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+          </svg>
+        </span>
+      </button>
+      <div class="dropdown-menu" role="menu">
+        {{link "my_activities" role="menuitem"}}
+        {{my_profile role="menuitem"}}
+        {{change_password role="menuitem"}}
+        {{link "sign_out" role="menuitem"}}
       </div>
+    </div>
     {{else}}
       {{#link "sign_in" class="sign-in"}}
         {{t 'sign_in'}}

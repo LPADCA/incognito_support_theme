@@ -1,16 +1,44 @@
 <h1 class="visibility-hidden">{{ help_center.name }}</h1>
 
-<section id="main-content" class="section hero">
-  <div class="hero-inner">
-    <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
-      <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
-      <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
-    </svg>
-    {{search submit=false instant=settings.instant_search class='search search-full'}}
+<section id="main-content" class="section intro">
+  <div class="hero">
+    
+  </div>
+  <div class="intro-content">
+    <h2 class="intro-heading">
+      Intro text input here
+    </h2>
+    <div class="intro-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies intege.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies intege.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies intege.
+    </div>
   </div>
 </section>
-
+<div class="support-actions container">
+  <div class="customer-support-container">
+    <h3 class="support-actions-title">{{ help_center.name }}</h3>
+    <h4>{{dc 'hi_help' }}</h4>
+    <div class="support-actions-container">
+      {{#link 'new_request' class='button' role='button' }}
+        {{ dc 'open_ticket' }}
+      {{/link}}
+      {{#link 'new_request' class='button' role='button' }}
+        {{ dc 'manage_ticket' }}
+      {{/link}}
+    </div>
+  </div>
+  <div class="knowledgebase-container">
+    <h3 class="support-actions-title">{{ t 'knowledge_base' }}</h3>
+    <h4>{{dc 'looking_more' }}</h4>
+    <div class="support-search-container">
+      <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="search-icon" aria-hidden="true">
+        <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor"/>
+        <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5"/>
+      </svg>
+      {{search submit=false instant=settings.instant_search class='search search-full'}}
+    </div>
+  </div>
+</div>
 <div class="container">
   <section class="section knowledge-base">
     <h2 class="visibility-hidden">{{ t 'categories' }}</h2>

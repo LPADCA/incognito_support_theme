@@ -781,7 +781,6 @@ ul {
 .nav-wrapper .menu-button {
   background: none;
   border: 0;
-  color: $link_color;
   display: inline-block;
   margin-right: 10px;
   padding: 0;
@@ -796,8 +795,8 @@ ul {
 
 .nav-wrapper .menu-button .icon-menu {
   vertical-align: middle;
-  width: 13px;
-  height: 13px;
+  width: 22px;
+  height: 22px;
 }
 
 [dir="rtl"] .nav-wrapper .menu-button {
@@ -860,12 +859,14 @@ ul {
   }
 }
 
-.user-info > button {
+.user-info  button {
   border: 0;
   color: $text_color;
   min-width: 0;
   padding: 0;
   white-space: nowrap;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .user-info > button:hover, .user-info > button:focus {
@@ -1018,13 +1019,21 @@ ul {
 
 .intro {
   display: flex;
+  flex-direction: column;
   color: #FFFFFF;
   min-height: 60vh;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .intro {
+    flex-direction: row;
+  }
+}
+
+
+@media (min-width: 1024px) {
   .intro-content {
-    width: 30%;
+    width: 40%;
   }
 }
 
@@ -1038,6 +1047,7 @@ ul {
 
 .intro-heading {
   font-size: 38px;
+  line-height: 1;
 }
 
 .hero {
@@ -1049,9 +1059,9 @@ ul {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hero {
-    width: 70%;
+    width: 60%;
   }
 }
 .hero-inner {
@@ -1187,6 +1197,7 @@ ul {
   display: block;
   width: 35px;
   height: 4px;
+  border-radius: 2px;
   background-color: $link_color;
 }
 
@@ -1203,6 +1214,13 @@ ul {
   flex-direction: column;
 }
 
+
+@media (min-width: 1024px) {
+  .support-actions-container {
+    flex-direction: row;
+  }
+}
+
 .support-actions-container .button:last-child {
   margin-top: 20px;
 }
@@ -1210,6 +1228,7 @@ ul {
 @media (min-width: 1025px) {
   .support-actions-container .button:last-child {
     margin-left: 20px;
+    margin-top: 0;
   }
 }
 
@@ -1253,7 +1272,7 @@ ul {
   max-width: 690px;
   margin: 110px auto;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 
 .announcement-table {
@@ -1374,6 +1393,55 @@ ul {
 
 .wtf-sales {
   background-image: url("./assets/images/cards/sales.jpg");
+}
+
+
+/***** Contacts ******/
+.contacts {
+  position: relative;
+  padding: 20px 0;
+}
+
+.contacts:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: 450px;
+  height: 100%;
+}
+
+.contacts-container {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    padding: 80px 0;
+  }
+
+  .contacts:before {
+    background-color: #C0F3DC;
+  }
+
+  .contacts-container {
+    min-height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    background-image: url("./assets/images/contacts.png");
+  }
+}
+
+.contact-title {
+  display: inline-block;
+  width: auto;
+  position: relative;
+}
+
+.contact-title::before {
+  left: 0;
 }
 
 /***** Blocks *****/
@@ -5000,7 +5068,7 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 .footer {
-  padding: 40px;
+  padding: 40px 0;
   color: white
 }
 
@@ -5443,7 +5511,6 @@ html[dir="rtl"] .notification-left-aligned {
 }
 
 .below_footer .copyright {
-  padding-left: 20px;
   color: white
 }
 

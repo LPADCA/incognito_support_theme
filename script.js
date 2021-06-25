@@ -398,4 +398,48 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  const announcementContainer = document
+    .getElementById('announcements');
+
+  const announcement = announcementContainer
+    .innerHTML
+    .trim()
+    .split('\n')
+    .map(e => e.split(',')
+    .map(e => e.trim()));
+
+  announcementContainer.innerHTML = null
+
+  function createCell(content) {
+    const cell = document.createElement("div");
+    cell.classList.add("announcement-cell");
+    cell.innerText = content;
+    return cell;
+  }
+
+  announcement.forEach((a) => {
+    let row;
+    const noLink = a[2] === undefined || a[2] === "";
+    if (noLink) {
+      row = document.createElement("div");
+    } else {
+      row = document.createElement("a");
+      row.href = a[2];
+      row.classList.add("announcement-link");
+    }
+    row.classList.add("announcement-row");
+
+    row.appendChild(createCell(a[1]));
+    row.appendChild(createCell(a[0]));
+    const thirdCell = createCell("");
+    if (!noLink) {
+      const arrow = document.createElement("div");
+      arrow.classList.add("arrow-right");
+      thirdCell.appendChild(arrow);
+    }
+    row.appendChild(thirdCell);
+    announcementContainer.appendChild(row);
+  })
+
 });

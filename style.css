@@ -1024,35 +1024,39 @@ ul {
   min-height: 60vh;
 }
 
-@media (min-width: 1024px) {
-  .intro {
-    flex-direction: row;
-  }
-}
-
-
-@media (min-width: 1024px) {
-  .intro-content {
-    width: 40%;
-  }
-}
-
 .intro-content {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background: transparent linear-gradient(180deg, #202635 0%, #335C6F 100%) 0% 0% no-repeat padding-box;
   padding: 40px 70px 40px 40px;
+  font-size: 24px;
 }
 
 .intro-heading {
-  font-size: 38px;
   line-height: 1;
+  font-size: 36px;
+}
+
+@media (min-width: 1024px) {
+  .intro {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .intro-content {
+    width: 40%;
+    font-size: 32px;
+  }
+  .intro-heading {
+    font-size: 48px;
+  }
 }
 
 .hero {
   background-image: url($homepage_background_image);
-  background-position: top center;
+  background-position: center;
   background-size: cover;
   min-height: 452px;
   padding: 0 20px;
@@ -1060,13 +1064,13 @@ ul {
 }
 
 @media (min-width: 1024px) {
-  .hero {
+  .hero:not(.community-hero) {
     width: 60%;
   }
 }
 .hero-inner {
   position: relative;
-  top: 50%;
+  top: 200px;
   transform: translateY(-50%);
   max-width: 610px;
   margin: 0 auto;
@@ -1254,7 +1258,7 @@ ul {
   font-weight: bold;
 }
 
-.button:hover {
+.button:hover, .button:active, .button:focus {
   background-color: white;
   color: $link_color;
 }
@@ -1408,7 +1412,6 @@ ul {
   right: 0;
   content: "";
   display: block;
-  width: 450px;
   height: 100%;
 }
 
@@ -1422,15 +1425,26 @@ ul {
   }
 
   .contacts:before {
+    width: 350px;
     background-color: #C0F3DC;
   }
 
   .contacts-container {
-    min-height: 400px;
+    min-height: 300px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right top;
     background-image: url("./assets/images/contacts.png");
+  }
+}
+
+@media (min-width: 1024px) {
+  .contacts-container {
+    min-height: 400px;
+  }
+
+  .contacts:before {
+    width: 550px;
   }
 }
 
@@ -4962,7 +4976,7 @@ html[dir="rtl"] .notification-left-aligned {
   font-size: 14px;
   font-style: normal;
   font-weight: normal;
-  left: 0;
+  right: 0;
   margin-top: 1px;
   min-width: 170px;
   padding: 10px 0;
@@ -5064,6 +5078,7 @@ html[dir="rtl"] .notification-left-aligned {
 
 /***** FOOOTER *****/
 .footer-container-wrapper {
+  margin-top: 20px;
   background-color: #202635
 }
 

@@ -712,7 +712,7 @@ ul {
 
 .English:before {
   content: " ";
-  background-image: url("./assets/images/us.svg");
+  background-image: url($assets-us-svg);
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -721,7 +721,7 @@ ul {
 
 .Español:before {
   content: " ";
-  background-image: url("./assets/images/spain.svg");
+  background-image: url($assets-spain-svg);
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -731,7 +731,7 @@ ul {
 
 .Português:before {
   content: " ";
-  background-image: url("./assets/images/brazil.svg");
+  background-image: url($assets-brazil-svg);
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -1321,7 +1321,7 @@ ul {
 .arrow-right {
   width: 10px;
   height: 18px;
-  background-image: url("./assets/images/arrow.svg");
+  background-image: url($assets-arrow-svg);
   background-repeat: no-repeat;
 }
 
@@ -1330,7 +1330,7 @@ ul {
 }
 
 .announcement-row:hover .arrow-right {
-  background-image: url("./assets/images/arrow-red.svg");
+  background-image: url($assets-arrow-red-svg);
 }
 
 .announcement-link {
@@ -1376,27 +1376,27 @@ ul {
 }
 
 .wtf-support {
-  background-image: url("./assets/images/cards/about.jpg");
+  background-image: url($assets-about-jpg);
 }
 
 .wtf-knowledgebase {
-  background-image: url("./assets/images/cards/knowledgebase.jpg");
+  background-image: url($assets-knowledgebase-jpg);
 }
 
 .wtf-product {
-  background-image: url("./assets/images/cards/product.jpg");
+  background-image: url($assets-product-jpg);
 }
 
 .wtf-community {
-  background-image: url("./assets/images/cards/community.jpg");
+  background-image: url($assets-community-jpg);
 }
 
 .wtf-security {
-  background-image: url("./assets/images/cards/security.jpg");
+  background-image: url($assets-security-jpg);
 }
 
 .wtf-sales {
-  background-image: url("./assets/images/cards/sales.jpg");
+  background-image: url($assets-sales-jpg);
 }
 
 

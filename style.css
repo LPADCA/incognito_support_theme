@@ -1434,7 +1434,7 @@ ul {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right top;
-    background-image: url("./assets/images/contacts.png");
+    background-image: url($assets-contacts-png);
   }
 }
 

@@ -1333,8 +1333,14 @@ ul {
   background-image: url($assets-arrow-red-svg);
 }
 
+.announcement-row:first-child {
+  font-weight: bold;
+  color: #EB002E;
+}
+
 .announcement-link {
   color: $text_color;
+  text-decoration: underline;
 }
 
 .announcement-link:hover {

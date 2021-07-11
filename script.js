@@ -415,6 +415,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cell = document.createElement("div");
     cell.classList.add("announcement-cell");
     cell.innerText = content;
+    cell.innerHTML = cell.innerHTML.replace(/&amp;/g, "&")
     return cell;
   }
 
